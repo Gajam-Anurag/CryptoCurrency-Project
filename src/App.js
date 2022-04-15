@@ -36,7 +36,7 @@ import icon from './images/cryptocurrency.png';
         {console.log(typeof(localStorage.getItem("isLoggedIn")),localStorage.getItem("isLoggedIn")=="false")}
       {(localStorage.getItem("isLoggedIn")==null||localStorage.getItem("isLoggedIn")=="false")?
         <div className='container'>
-        <div className='row'>
+        <div className='row' style={{width:'22%', padding : '5px'}}>
         <div className="google-text col-sm-4">
         
         <Typography.Title level = {2} className = "logo col-sm-6">

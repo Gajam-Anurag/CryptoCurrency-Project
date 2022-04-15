@@ -381,7 +381,9 @@ width: 70%;
     margin-top: 18%; 
     margin-bottom: 18%;
     margin-left: 38%;
+    box-shadow: 3px 3px rgb(152, 146, 146), -1em 0 .4em rgb(131, 107, 131);
+    
 }
 .Google-login{
-    margin-left: 5%;
+    margin-left: 15%;
 }
