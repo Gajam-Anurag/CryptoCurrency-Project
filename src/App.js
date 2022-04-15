@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link ,Redirect,Router} from 'react-router-dom';
-import { Layout, Typography, Space } from 'antd';
+import { Layout, Typography, Space, Avatar } from 'antd';
 import { GoogleLogin } from 'react-google-login';
 import { Exchanges, Homepage, News, Cryptocurrencies, CryptoDetails, Navbar } from './components';
 import './App.css';
+import icon from './images/cryptocurrency.png';
 
 
   class App extends Component {
@@ -31,17 +32,27 @@ import './App.css';
     </div>
     <div className="main">
       <Layout>
+
         {console.log(typeof(localStorage.getItem("isLoggedIn")),localStorage.getItem("isLoggedIn")=="false")}
       {(localStorage.getItem("isLoggedIn")==null||localStorage.getItem("isLoggedIn")=="false")?
-    
+        <div className='container'>
+        <div className='row'>
+        <div className="google-text col-sm-4">
+        
+        <Typography.Title level = {2} className = "logo col-sm-6">
+                <h1>CryptoTracker</h1>
+            </Typography.Title> 
+        </div>
+        <div className="Google-login">
         <GoogleLogin
         clientId="696846841621-r3h6mebbaqg764a0fiobre96us2eloeb.apps.googleusercontent.com"
-        buttonText="Login"
+        buttonText="Sign in with Google"
         onSuccess={this.responseGoogle}
         onFailure={this.responseGoogle}
         cookiePolicy={'single_host_origin'}
         
-        />:''}
+        />
+        </div></div></div>:''}
         <div className="routes">
         {localStorage.getItem("isLoggedIn")=="true"?
         
@@ -69,9 +80,9 @@ import './App.css';
         </div>
       </Layout>
       <div className="footer">
-        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2021
+        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2022
           <Link to="/">
-            Cryptoverse Inc.
+          CryptoTracker Inc.
           </Link> <br />
           All Rights Reserved.
         </Typography.Title>
