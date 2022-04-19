@@ -32,6 +32,9 @@ const Navbar = () => {
                     <Link to="/news ">News</Link>
                 </Menu.Item>
                 <Menu.Item icon = {<BulbOutlined/>}>
+                    <Link to="/prediction ">Prediction</Link>
+                </Menu.Item>
+                <Menu.Item icon = {<BulbOutlined/>}>
                      <span onClick={()=>{console.log("clicked");localStorage.setItem("isLoggedIn","false");
                  window.location.reload();}}>Logout</span>
                 </Menu.Item>
