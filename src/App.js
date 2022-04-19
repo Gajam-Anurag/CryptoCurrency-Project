@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, Link ,Redirect,Router} from 'react-router-dom';
 import { Layout, Typography, Space, Avatar } from 'antd';
 import { GoogleLogin } from 'react-google-login';
-import { Exchanges, Homepage, News, Cryptocurrencies, CryptoDetails, Navbar } from './components';
+import { Exchanges, Homepage, News, Cryptocurrencies, CryptoDetails, Navbar, Prediction } from './components';
 import './App.css';
 import icon from './images/cryptocurrency.png';
 
@@ -72,6 +72,9 @@ import icon from './images/cryptocurrency.png';
             </Route>
             <Route exact path="/news">
               <News />
+            </Route>
+            <Route exact path = "/prediction">
+              <Prediction />
             </Route>
             
           </Switch>
